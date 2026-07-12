@@ -41,7 +41,7 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 - [x] Create a section with a heading and a link (placeholder URL) styled as a button.
 
 ### Task 5: Add downloadable food menu PDF
-- [ ] Provide a download link for a PDF file (placeholder `menu.pdf`). Style as a button.
+- [x] Provide a download link for a PDF file (placeholder `menu.pdf`). Style as a button.
 
 ### Task 6: Add contact details (names only)
 - [ ] Display our first names (e.g., "Emily & James") without any other contact information.

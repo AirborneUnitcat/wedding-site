@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { Countdown } from "~/components/Countdown";
 import { GiftFund } from "~/components/GiftFund";
 import { Venue } from "~/components/Venue";
+import { FoodMenu } from "~/components/FoodMenu";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,6 +17,7 @@ export default function Home() {
       <Countdown />
       <GiftFund />
       <Venue />
+      <FoodMenu />
     </main>
   );
 }
