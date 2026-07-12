@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
@@ -11,12 +11,35 @@ const NAV_ITEMS = [
   { href: "#gifts", label: "Gifts" },
 ] as const;
 
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleNavClick = () => {
-    setMobileOpen(false);
-  };
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      setMobileOpen(false);
+      const id = href.replace("#", "");
+      scrollToSection(id);
+      window.history.pushState(null, "", href);
+    },
+    [],
+  );
+
+  // Scroll to section on page load if the URL has a hash
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      // Small delay to allow the page to render fully
+      setTimeout(() => scrollToSection(hash), 100);
+    }
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-taupe/10">
@@ -24,7 +47,7 @@ export function Navigation() {
         {/* Brand */}
         <a
           href="#hero"
-          onClick={handleNavClick}
+          onClick={(e) => handleNavClick(e, "#hero")}
           className="font-serif text-xl font-semibold text-choc dark:text-white tracking-tight"
         >
           Amy &amp; Morgan
@@ -36,6 +59,7 @@ export function Navigation() {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="nav-link text-sm font-medium text-taupe hover:text-choc dark:hover:text-white transition-colors"
             >
               {item.label}
@@ -78,7 +102,7 @@ export function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-sm font-medium text-taupe hover:text-choc dark:hover:text-white transition-colors py-1"
               >
                 {item.label}

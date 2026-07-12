@@ -90,7 +90,7 @@ export function Story() {
   return (
     <section
       id="story"
-      className="relative bg-white dark:bg-gray-950 py-24 sm:py-32"
+      className="relative bg-white dark:bg-gray-950 py-24 sm:py-32 overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 h-96 w-96 bg-autumn-orange/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />

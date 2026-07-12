@@ -76,7 +76,7 @@ export function Rsvp() {
     return (
       <section
         id="rsvp"
-        className="relative py-24 sm:py-32 bg-gradient-to-b from-amber-50/30 to-white dark:from-gray-900 dark:to-gray-950"
+        className="relative py-24 sm:py-32 bg-gradient-to-b from-amber-50/30 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden"
       >
         <div className="mx-auto max-w-2xl px-4 sm:px-6 text-center">
           <div className="rounded-2xl bg-white dark:bg-gray-800/50 p-8 sm:p-12 border border-taupe/10">
@@ -108,7 +108,7 @@ export function Rsvp() {
   return (
     <section
       id="rsvp"
-      className="relative py-24 sm:py-32 bg-gradient-to-b from-amber-50/30 to-white dark:from-gray-900 dark:to-gray-950"
+      className="relative py-24 sm:py-32 bg-gradient-to-b from-amber-50/30 to-white dark:from-gray-900 dark:to-gray-950 overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-autumn-orange/5 blur-3xl" />

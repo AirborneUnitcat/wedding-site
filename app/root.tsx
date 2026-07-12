@@ -29,6 +29,8 @@ const INLINE_THEME_SCRIPT = `
     var theme = localStorage.getItem('theme');
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   })();
 `;
@@ -43,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         <script dangerouslySetInnerHTML={{ __html: INLINE_THEME_SCRIPT }} />
       </head>
-      <body className="antialiased">
+      <body className="antialiased overflow-x-hidden">
         <Navigation />
         <main>{children}</main>
         <ScrollRestoration />
