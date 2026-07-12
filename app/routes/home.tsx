@@ -1,5 +1,6 @@
 import type { Route } from "./+types/home";
 import { Countdown } from "~/components/Countdown";
+import { GiftFund } from "~/components/GiftFund";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,8 +11,9 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center min-h-dvh bg-white dark:bg-gray-950">
+    <main className="flex flex-col items-center min-h-dvh bg-white dark:bg-gray-950">
       <Countdown />
+      <GiftFund />
     </main>
   );
 }
