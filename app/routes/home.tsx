@@ -1,25 +1,37 @@
 import type { Route } from "./+types/home";
-import { Countdown } from "~/components/Countdown";
-import { GiftFund } from "~/components/GiftFund";
-import { Venue } from "~/components/Venue";
+import { Hero } from "~/components/Hero";
+import { Story } from "~/components/Story";
+import { BigDay } from "~/components/BigDay";
 import { FoodMenu } from "~/components/FoodMenu";
-import { Contact } from "~/components/Contact";
+import { GiftFund } from "~/components/GiftFund";
+import { Rsvp } from "~/components/Rsvp";
+import { Gallery } from "~/components/Gallery";
+import { Guestbook } from "~/components/Guestbook";
+import { Footer } from "~/components/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Our Wedding" },
-    { name: "description", content: "We're getting married!" },
+    { title: "Amy & Morgan | Wedding" },
+    {
+      name: "description",
+      content:
+        "Join us as we celebrate our wedding on December 5th, 2027 at West Tower, Ormskirk.",
+    },
   ];
 }
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-dvh bg-white dark:bg-gray-950">
-      <Countdown />
-      <GiftFund />
-      <Venue />
+    <>
+      <Hero />
+      <Story />
+      <BigDay />
       <FoodMenu />
-      <Contact />
-    </main>
+      <GiftFund />
+      <Rsvp />
+      <Gallery />
+      <Guestbook />
+      <Footer />
+    </>
   );
 }
