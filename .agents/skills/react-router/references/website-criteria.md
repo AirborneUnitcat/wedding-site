@@ -38,7 +38,7 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 - [x] Create a section with a heading and a link (placeholder URL) styled as a button.
 
 ### Task 4: Add Venue link
-- [ ] Create a section with a heading and a link (placeholder URL) styled as a button.
+- [x] Create a section with a heading and a link (placeholder URL) styled as a button.
 
 ### Task 5: Add downloadable food menu PDF
 - [ ] Provide a download link for a PDF file (placeholder `menu.pdf`). Style as a button.
