@@ -22,7 +22,7 @@ const MILESTONES = [
     title: "The endless train journeys",
     description:
       "£40 a trip, looking back it seems so cheap now.",
-    image: `https://picsum.photos/seed/proposal/600/400`,
+    image: `https://picsum.photos/seed/train/600/400`,
     alt: "Lots and lots of train tickets",
   },
   {
@@ -30,7 +30,7 @@ const MILESTONES = [
     title: "The Big Move",
     description:
       "Amy decided Southport was the obvious choice. The sea breeze, and the occasional high-tide; what's not to love?",
-    image: `https://picsum.photos/seed/wedding/600/400`,
+    image: `https://picsum.photos/seed/move/600/400`,
     alt: "Southport beach",
   },
   {
@@ -38,7 +38,7 @@ const MILESTONES = [
     title: "The Even Bigger Move",
     description:
       "We purchased our first fixer-upper together, then 6 months down the line, accidentally moved in due to Covid. Atleast we got TV in time.",
-    image: `https://picsum.photos/seed/wedding/600/400`,
+    image: `https://picsum.photos/seed/frost/600/400`,
     alt: "Picture of our house",
   },
   {
@@ -46,7 +46,7 @@ const MILESTONES = [
     title: "The Proposal?",
     description:
       "10 year anniversary, no biggie.",
-    image: `https://picsum.photos/seed/wedding/600/400`,
+    image: `https://picsum.photos/seed/3/600/400`,
     alt: "Hot-tub holiday",
   },
   {
@@ -54,7 +54,7 @@ const MILESTONES = [
     title: "<span class='italic font-extrabold text-4xl'>The</span> Proposal!",
     description:
       "Sat in a hot-tub, wondering what could possible be a 'morning present', until Morgan finally gave in and proposed whilst watching spiderman, just before midnight.",
-    image: `https://picsum.photos/seed/wedding/600/400`,
+    image: `https://picsum.photos/seed/11/600/400`,
     alt: "Hot-tub holiday",
   },
 ];
