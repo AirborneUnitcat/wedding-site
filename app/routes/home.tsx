@@ -3,6 +3,7 @@ import { Countdown } from "~/components/Countdown";
 import { GiftFund } from "~/components/GiftFund";
 import { Venue } from "~/components/Venue";
 import { FoodMenu } from "~/components/FoodMenu";
+import { Contact } from "~/components/Contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -18,6 +19,7 @@ export default function Home() {
       <GiftFund />
       <Venue />
       <FoodMenu />
+      <Contact />
     </main>
   );
 }

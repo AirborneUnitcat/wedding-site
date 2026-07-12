@@ -44,7 +44,7 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 - [x] Provide a download link for a PDF file (placeholder `menu.pdf`). Style as a button.
 
 ### Task 6: Add contact details (names only)
-- [ ] Display our first names (e.g., "Emily & James") without any other contact information.
+- [x] Display our first names (e.g., "Emily & James") without any other contact information.
 
 ### Task 7: Final review and responsiveness
 - [ ] Ensure all components are responsive (mobile-first).
