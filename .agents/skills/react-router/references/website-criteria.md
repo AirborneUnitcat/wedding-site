@@ -30,9 +30,9 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 - [x] Verify that utility classes like `bg-choc`, `text-autumn-orange` work.
 
 ### Task 2: Add the wedding date and countdown
-- [ ] Create a component that displays the wedding date prominently.
-- [ ] Implement a live countdown timer (days, hours, minutes, seconds) using JavaScript.
-- [ ] Style with Tailwind.
+- [x] Create a component that displays the wedding date prominently.
+- [x] Implement a live countdown timer (days, hours, minutes, seconds) using JavaScript.
+- [x] Style with Tailwind.
 
 ### Task 3: Add Gift / Honeymoon Fund link
 - [ ] Create a section with a heading and a link (placeholder URL) styled as a button.

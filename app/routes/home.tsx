@@ -1,13 +1,17 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Countdown } from "~/components/Countdown";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Our Wedding" },
+    { name: "description", content: "We're getting married!" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main className="flex items-center justify-center min-h-dvh bg-white dark:bg-gray-950">
+      <Countdown />
+    </main>
+  );
 }
