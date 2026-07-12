@@ -7,13 +7,13 @@ const MILESTONES = [
     description:
       'It all started with a "Hey! Wanna play darts?", running out of a doorway in Butlins. Amy, of course, being the one to bring the confidence.',
     image: `https://picsum.photos/seed/meeting/600/400`,
-    alt: "Bultins",
+    alt: "Butlins",
   },
   {
     year: "2014",
     title: "Making it official",
     description:
-      "Pi day, 2014, and Morgan being a nerd believed this would be a easy way to remember the anniversary.",
+      "Pi Day, 2014, and Morgan, being a nerd, believed this would be an easy way to remember the anniversary.",
     image: `https://picsum.photos/seed/adventure/600/400`,
     alt: "A sketch of Pi-Day",
   },
@@ -37,7 +37,7 @@ const MILESTONES = [
     year: "2019",
     title: "The Even Bigger Move",
     description:
-      "We purchased our first fixer-upper together, then 6 months down the line, accidentally moved in due to Covid. Atleast we got TV in time.",
+      "We purchased our first fixer-upper together, then 6 months down the line, accidentally moved in due to Covid. At least we got the TV in time.",
     image: `https://picsum.photos/seed/frost/600/400`,
     alt: "Picture of our house",
   },
@@ -45,7 +45,7 @@ const MILESTONES = [
     year: "2024",
     title: "The Proposal?",
     description:
-      "10 year anniversary, no biggie.",
+      "10-year anniversary, no biggie.",
     image: `https://picsum.photos/seed/3/600/400`,
     alt: "Hot-tub holiday",
   },
@@ -53,7 +53,7 @@ const MILESTONES = [
     year: "2025",
     title: "<span class='italic font-extrabold text-4xl'>The</span> Proposal!",
     description:
-      "Sat in a hot-tub, wondering what could possible be a 'morning present', until Morgan finally gave in and proposed whilst watching spiderman, just before midnight.",
+      "Sat in a hot-tub, wondering what could possibly be a 'morning present', until Morgan finally gave in and proposed whilst watching Spider-Man, just before midnight.",
     image: `https://picsum.photos/seed/11/600/400`,
     alt: "Hot-tub holiday",
   },
