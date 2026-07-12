@@ -142,24 +142,68 @@ export function BigDay() {
           </div>
         </div>
 
-        {/* Map placeholder */}
+        {/* Venue location */}
         <div className="mt-16">
-          <div className="relative overflow-hidden rounded-2xl aspect-21/9 max-h-80 bg-gray-200 dark:bg-gray-800 border border-taupe/10">
-            {/* Placeholder map */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="h-12 w-12 mx-auto text-taupe/40 mb-3">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <p className="text-taupe text-sm">Map placeholder — West Tower, Ormskirk</p>
-                <a
-                  href="#"
-                  className="inline-block mt-3 rounded-lg bg-autumn-orange px-6 py-2 text-sm text-white font-medium transition-colors hover:bg-terracotta"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Get Directions
-                </a>
+          <div className="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800/30 border border-taupe/10">
+            <div className="grid sm:grid-cols-2">
+              {/* Map area — visual card with address */}
+              <div className="relative flex items-center justify-center min-h-[200px] bg-linear-to-br from-choc/5 to-autumn-orange/5 dark:from-choc/20 dark:to-autumn-orange/10 p-8">
+                <div className="text-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-10 w-10 mx-auto text-autumn-orange mb-3"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  <p className="text-choc dark:text-white font-semibold text-lg">
+                    West Tower
+                  </p>
+                  <p className="text-taupe dark:text-gray-300 text-sm mt-1 leading-relaxed">
+                    Mill Ln, Aughton
+                    <br />
+                    Ormskirk L39 7HJ
+                  </p>
+                </div>
+              </div>
+
+              {/* Directions card */}
+              <div className="flex flex-col justify-center gap-4 p-8">
+                <div>
+                  <h3 className="font-serif text-xl font-semibold text-choc dark:text-white">
+                    Getting Here
+                  </h3>
+                  <p className="text-taupe dark:text-gray-300 text-sm mt-2 leading-relaxed">
+                    West Tower is located just outside Ormskirk, with easy access from the
+                    M58 and plenty of on-site parking.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Mill+Ln+Aughton+Ormskirk+L39+7HJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-autumn-orange px-6 py-3 text-sm text-white font-semibold transition-colors hover:bg-terracotta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-autumn-orange"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                      <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Mill+Ln+Aughton+Ormskirk+L39+7HJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-taupe/30 px-6 py-3 text-sm text-taupe dark:text-gray-300 font-medium transition-colors hover:border-taupe/50 hover:text-choc dark:hover:text-white"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.3-4.3" />
+                    </svg>
+                    View on Maps
+                  </a>
+                </div>
               </div>
             </div>
           </div>
