@@ -26,8 +26,8 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 ## Task List (complete one at a time)
 
 ### Task 1: Configure Tailwind with custom colors
-- [ ] Add the five brand colors to `tailwind.config.js` (or equivalent).
-- [ ] Verify that utility classes like `bg-choc`, `text-autumn-orange` work.
+- [x] Add the five brand colors to `tailwind.config.js` (or equivalent).
+- [x] Verify that utility classes like `bg-choc`, `text-autumn-orange` work.
 
 ### Task 2: Add the wedding date and countdown
 - [ ] Create a component that displays the wedding date prominently.
