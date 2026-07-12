@@ -33,7 +33,7 @@ function GalleryImage({
       }`}
       style={{ transitionDelay: `${(index % 6) * 100}ms` }}
     >
-      <div className="aspect-4/3">
+      <div className="h-full w-full min-h-48">
         <img
           src={src}
           alt={alt}

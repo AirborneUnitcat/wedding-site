@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Use class-based dark mode instead of prefers-color-scheme */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -17,6 +20,12 @@ body {
   @apply bg-white dark:bg-gray-950;
   @apply text-choc dark:text-gray-100;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Section scroll offset for fixed nav bar */
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 html.dark {
@@ -101,15 +110,10 @@ body,
 /* Gallery grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
-.gallery-grid > :nth-child(3n + 1) {
-  grid-row: span 2;
-}
-
-/* Masonry-like layout on larger screens */
 @media (min-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
