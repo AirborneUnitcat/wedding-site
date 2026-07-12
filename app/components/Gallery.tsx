@@ -1,15 +1,8 @@
 import { useInView } from "~/hooks/useInView";
+import { ComingSoon } from "~/components/ComingSoon";
 
 const GALLERY_IMAGES = [
-  { src: "https://picsum.photos/seed/wedding1/800/600", alt: "Wedding venue decoration", span: true },
-  { src: "https://picsum.photos/seed/wedding2/600/800", alt: "Bridal bouquet", span: false },
-  { src: "https://picsum.photos/seed/wedding3/600/600", alt: "Table setting details", span: false },
-  { src: "https://picsum.photos/seed/wedding4/800/600", alt: "Dancing at sunset", span: false },
-  { src: "https://picsum.photos/seed/wedding5/600/800", alt: "Wedding rings", span: false },
-  { src: "https://picsum.photos/seed/wedding6/800/600", alt: "Cake decoration", span: true },
-  { src: "https://picsum.photos/seed/wedding7/600/600", alt: "Floral arrangements", span: false },
-  { src: "https://picsum.photos/seed/wedding8/800/600", alt: "Evening lights", span: false },
-  { src: "https://picsum.photos/seed/wedding9/600/800", alt: "Champagne toast", span: false },
+  { src: "https://picsum.photos/seed/wedding1/800/600", alt: "Wedding venue decoration", span: true }
 ];
 
 function GalleryImage({
@@ -72,17 +65,28 @@ export function Gallery() {
           </p>
         </div>
 
-        {/* Gallery grid */}
-        <div className="gallery-grid">
-          {GALLERY_IMAGES.map((image, index) => (
-            <GalleryImage
-              key={image.src}
-              src={image.src}
-              alt={image.alt}
-              index={index}
-            />
-          ))}
-        </div>
+        {/* Gallery grid — coming soon */}
+        <ComingSoon
+          message="Gallery Coming Soon"
+          hint="We're collecting our favourite photos to share with you. The gallery will be filled with memories from our engagement, the big day, and everything in between."
+          className="max-w-2xl mx-auto"
+        />
+
+        {false && (
+          <>
+            {/* Gallery grid */}
+            <div className="gallery-grid">
+              {GALLERY_IMAGES.map((image, index) => (
+                <GalleryImage
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  index={index}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

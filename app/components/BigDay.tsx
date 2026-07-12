@@ -1,4 +1,5 @@
 import { useInView } from "~/hooks/useInView";
+import { ComingSoon } from "~/components/ComingSoon";
 
 const SCHEDULE = [
   { time: "1:00 PM", event: "Guest Arrival & Welcome Drinks" },
@@ -121,14 +122,23 @@ export function BigDay() {
             <h3 className="font-serif text-2xl font-semibold text-choc dark:text-white mb-6">
               Schedule
             </h3>
-            {SCHEDULE.map((item, index) => (
-              <ScheduleItem
-                key={item.time}
-                time={item.time}
-                event={item.event}
-                index={index}
-              />
-            ))}
+            <ComingSoon
+              message="Timeline Coming Soon"
+              hint="We're finalising the order of the day. Check back closer to December for the full schedule — we promise it'll be worth the wait!"
+            />
+
+            {false && (
+              <>
+                {SCHEDULE.map((item, index) => (
+                  <ScheduleItem
+                    key={item.time}
+                    time={item.time}
+                    event={item.event}
+                    index={index}
+                  />
+                ))}
+              </>
+            )}
           </div>
         </div>
 

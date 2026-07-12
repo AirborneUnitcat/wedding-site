@@ -1,4 +1,5 @@
 import { useInView } from "~/hooks/useInView";
+import { ComingSoon } from "~/components/ComingSoon";
 
 const MENU_ITEMS = {
   starters: [
@@ -93,33 +94,44 @@ export function FoodMenu() {
           </p>
         </div>
 
-        {/* Menu grid */}
-        <div className="grid sm:grid-cols-2 gap-10 sm:gap-12">
-          {categories.map((cat, index) => (
-            <MenuCategory
-              key={cat.title}
-              title={cat.title}
-              items={cat.items}
-              index={index}
-            />
-          ))}
-        </div>
+        <ComingSoon
+          message="Menu Being Finalised"
+          hint="We're working with our caterers to craft a beautiful menu for the day. Whether you're a meat-lover, fish-fan, or plant-powered — there'll be something delicious for everyone."
+        >
+          <p>Dietary requirements can be discussed once the menu is confirmed.</p>
+        </ComingSoon>
 
-        {/* Download button */}
-        <div className="mt-12 text-center">
-          <a
-            href="/menu.pdf"
-            download
-            className="inline-flex items-center gap-2 rounded-lg bg-autumn-orange px-8 py-3 text-white font-semibold text-lg transition-colors hover:bg-terracotta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-autumn-orange"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Download Menu (PDF)
-          </a>
-        </div>
+        {false && (
+          <>
+            {/* Menu grid */}
+            <div className="grid sm:grid-cols-2 gap-10 sm:gap-12">
+              {categories.map((cat, index) => (
+                <MenuCategory
+                  key={cat.title}
+                  title={cat.title}
+                  items={cat.items}
+                  index={index}
+                />
+              ))}
+            </div>
+
+            {/* Download button */}
+            <div className="mt-12 text-center">
+              <a
+                href="/menu.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-lg bg-autumn-orange px-8 py-3 text-white font-semibold text-lg transition-colors hover:bg-terracotta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-autumn-orange"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download Menu (PDF)
+              </a>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

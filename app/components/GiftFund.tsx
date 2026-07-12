@@ -1,4 +1,5 @@
 import { useInView } from "~/hooks/useInView";
+import { ComingSoon } from "~/components/ComingSoon";
 
 export function GiftFund() {
   const { ref, isInView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -6,7 +7,7 @@ export function GiftFund() {
   return (
     <section
       id="gifts"
-      className="relative bg-gradient-to-b from-white to-amber-50/30 dark:from-gray-950 dark:to-gray-900 py-24 sm:py-32"
+      className="relative bg-linear-to-b from-white to-amber-50/30 dark:from-gray-950 dark:to-gray-900 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div
@@ -34,39 +35,49 @@ export function GiftFund() {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-choc dark:text-white mb-4">
             Honeymoon Fund
           </h2>
-          <p className="text-taupe dark:text-gray-300 max-w-lg mx-auto text-lg leading-relaxed mb-4">
+          <p className="text-taupe dark:text-gray-300 max-w-lg mx-auto text-lg leading-relaxed mb-6">
             Your presence at our wedding is the greatest gift of all. If you
             wish to contribute to our honeymoon fund, we would be truly
             grateful.
           </p>
-          <p className="text-sm text-taupe dark:text-gray-400 mb-8">
-            All contributions will go towards making our honeymoon extra special
-            — think sunset dinners, couple&apos;s massages, and adventures we'll
-            remember forever.
-          </p>
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            className="inline-flex items-center gap-2 rounded-lg bg-autumn-orange px-8 py-3 text-white font-semibold transition-colors hover:bg-terracotta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-autumn-orange"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-5 w-5"
-            >
-              <polyline points="20 12 20 22 4 22 4 12" />
-              <rect x="2" y="7" width="20" height="5" />
-              <line x1="12" y1="22" x2="12" y2="7" />
-              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
-              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
-            </svg>
-            Contribute Here
-          </a>
+
+          <ComingSoon
+            message="Honeymoon Fund Coming Soon"
+            hint="We're setting up a way for you to contribute if you'd like. We'll share the details once everything is ready — thank you for your generosity!"
+          />
+
+          {false && (
+            <>
+              <p className="text-sm text-taupe dark:text-gray-400 mb-8">
+                All contributions will go towards making our honeymoon extra special
+                — think sunset dinners, couple&apos;s massages, and adventures we'll
+                remember forever.
+              </p>
+              <a
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="inline-flex items-center gap-2 rounded-lg bg-autumn-orange px-8 py-3 text-white font-semibold transition-colors hover:bg-terracotta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-autumn-orange"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-5 w-5"
+                >
+                  <polyline points="20 12 20 22 4 22 4 12" />
+                  <rect x="2" y="7" width="20" height="5" />
+                  <line x1="12" y1="22" x2="12" y2="7" />
+                  <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+                  <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                </svg>
+                Contribute Here
+              </a>
+            </>
+          )}
         </div>
       </div>
     </section>
