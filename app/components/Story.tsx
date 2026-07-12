@@ -2,36 +2,60 @@ import { useInView } from "~/hooks/useInView";
 
 const MILESTONES = [
   {
-    year: "2019",
+    year: "2013",
     title: "How We Met",
     description:
-      "It all started at a mutual friend's dinner party. We were seated next to each other and talked all night about travel, music, and our shared love of terrible puns.",
+      'It all started with a "Hey! Wanna play darts?", running out of a doorway in Butlins. Amy, of course, being the one to bring the confidence.',
     image: `https://picsum.photos/seed/meeting/600/400`,
-    alt: "A candlelit dinner setting",
+    alt: "Bultins",
   },
   {
-    year: "2021",
-    title: "First Adventure Together",
+    year: "2014",
+    title: "Making it official",
     description:
-      "Our first big trip — a week in the Lake District. We hiked, got caught in the rain, and discovered we could survive (and laugh through) anything together.",
+      "Pi day, 2014, and Morgan being a nerd believed this would be a easy way to remember the anniversary.",
     image: `https://picsum.photos/seed/adventure/600/400`,
-    alt: "Mountain landscape view",
+    alt: "A sketch of Pi-Day",
   },
   {
-    year: "2023",
-    title: "The Proposal",
+    year: "2014-2017",
+    title: "The endless train journeys",
     description:
-      "Morgan proposed on a quiet beach at sunset. There were fairy lights, a bottle of champagne, and a very wobbly kneel in the sand. Amy said yes (eventually — after the shock wore off).",
+      "£40 a trip, looking back it seems so cheap now.",
     image: `https://picsum.photos/seed/proposal/600/400`,
-    alt: "Sunset over the ocean",
+    alt: "Lots and lots of train tickets",
   },
   {
-    year: "2027",
-    title: "The Big Day",
+    year: "2017",
+    title: "The Big Move",
     description:
-      "And now, here we are — counting down the days until we say 'I do' surrounded by our favourite people. We can't wait to celebrate with you!",
+      "Amy decided Southport was the obvious choice. The sea breeze, and the occasional high-tide; what's not to love?",
     image: `https://picsum.photos/seed/wedding/600/400`,
-    alt: "Elegant wedding venue decor",
+    alt: "Southport beach",
+  },
+  {
+    year: "2019",
+    title: "The Even Bigger Move",
+    description:
+      "We purchased our first fixer-upper together, then 6 months down the line, accidentally moved in due to Covid. Atleast we got TV in time.",
+    image: `https://picsum.photos/seed/wedding/600/400`,
+    alt: "Picture of our house",
+  },
+  {
+    year: "2024",
+    title: "The Proposal?",
+    description:
+      "10 year anniversary, no biggie.",
+    image: `https://picsum.photos/seed/wedding/600/400`,
+    alt: "Hot-tub holiday",
+  },
+  {
+    year: "2025",
+    title: "<span class='italic font-extrabold text-4xl'>The</span> Proposal!",
+    description:
+      "Sat in a hot-tub, wondering what could possible be a 'morning present', until Morgan finally gave in and proposed whilst watching spiderman, just before midnight.",
+    image: `https://picsum.photos/seed/wedding/600/400`,
+    alt: "Hot-tub holiday",
   },
 ];
 
@@ -57,7 +81,7 @@ function MilestoneCard({
     >
       {/* Image */}
       <div className="relative w-full md:w-1/2 overflow-hidden rounded-2xl">
-        <div className="aspect-[3/2]">
+        <div className="aspect-3/2">
           <img
             src={milestone.image}
             alt={milestone.alt}
@@ -73,9 +97,10 @@ function MilestoneCard({
         <span className="text-sm font-semibold text-autumn-orange tracking-widest uppercase">
           {milestone.year}
         </span>
-        <h3 className="font-serif text-2xl md:text-3xl font-semibold text-choc dark:text-white">
-          {milestone.title}
-        </h3>
+        <h3
+          className="font-serif text-2xl md:text-3xl font-semibold text-choc dark:text-white"
+          dangerouslySetInnerHTML={{ __html: milestone.title }}
+        />
         <p className="text-taupe dark:text-gray-300 leading-relaxed">
           {milestone.description}
         </p>
@@ -108,8 +133,7 @@ export function Story() {
           </h2>
           <div className="flourish text-taupe mb-6" />
           <p className="text-taupe dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
-            From a chance meeting to a lifetime together — here's a little
-            journey through our favourite moments.
+            Thirteen years together — still feeling just as lucky.
           </p>
         </div>
 

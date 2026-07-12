@@ -34,7 +34,7 @@ function ScheduleItem({
       <div className="flex flex-col items-center">
         <div className="h-3 w-3 rounded-full bg-autumn-orange ring-4 ring-autumn-orange/20" />
         {index < SCHEDULE.length - 1 && (
-          <div className="mt-1 w-px flex-1 bg-gradient-to-b from-autumn-orange/40 to-transparent" />
+          <div className="mt-1 w-px flex-1 bg-linear-to-b from-autumn-orange/40 to-transparent" />
         )}
       </div>
       <div className="pb-8">
@@ -52,7 +52,7 @@ export function BigDay() {
   return (
     <section
       id="big-day"
-      className="relative bg-gradient-to-b from-white to-amber-50/30 dark:from-gray-950 dark:to-gray-900 py-24 sm:py-32"
+      className="relative bg-linear-to-b from-white to-amber-50/30 dark:from-gray-950 dark:to-gray-900 py-24 sm:py-32"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* Section header */}
@@ -111,9 +111,7 @@ export function BigDay() {
                 Dress Code
               </h3>
               <p className="text-taupe dark:text-gray-300 leading-relaxed">
-                Black tie optional. We'd love to see you dressed up, but your
-                comfort is what matters most. The venue has both indoor and
-                outdoor spaces, so bring a jacket or wrap for the evening.
+                No white, cream or baby pink. Look your best self, whatever that might look like.
               </p>
             </div>
           </div>
@@ -136,7 +134,7 @@ export function BigDay() {
 
         {/* Map placeholder */}
         <div className="mt-16">
-          <div className="relative overflow-hidden rounded-2xl aspect-[21/9] max-h-80 bg-gray-200 dark:bg-gray-800 border border-taupe/10">
+          <div className="relative overflow-hidden rounded-2xl aspect-21/9 max-h-80 bg-gray-200 dark:bg-gray-800 border border-taupe/10">
             {/* Placeholder map */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
