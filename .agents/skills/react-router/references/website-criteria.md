@@ -35,7 +35,7 @@ This is a **React** single-page application (SPA) using **React Router** for nav
 - [x] Style with Tailwind.
 
 ### Task 3: Add Gift / Honeymoon Fund link
-- [ ] Create a section with a heading and a link (placeholder URL) styled as a button.
+- [x] Create a section with a heading and a link (placeholder URL) styled as a button.
 
 ### Task 4: Add Venue link
 - [ ] Create a section with a heading and a link (placeholder URL) styled as a button.
